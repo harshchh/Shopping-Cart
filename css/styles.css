@@ -1,0 +1,165 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+i{
+    cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.navbar {
+  background-color: #502f4c;
+  color: aliceblue;
+  padding: 25px 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.cart {
+  background-color: blanchedalmond;
+  color: black;
+  font-size: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  position: relative; /* Used to align 0 in top right of the cart */
+}
+
+.cartAmount {
+  font-size: 16px;
+  background-color: red;
+  color: aliceblue;
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+.shop {
+  display: grid;
+  grid-template-columns: repeat(4,223px); /*4 is the amount of grids we need and 223px is the width of each grid*/
+  gap: 30px;
+  justify-content: center;
+}
+
+@media (max-width: 1000px) {
+  .shop {
+    grid-template-columns: repeat(2, 223px);
+  }
+}
+
+@media (max-width: 500px) {
+  .shop {
+    grid-template-columns: repeat(1, 223px);
+  }
+}
+
+.item {
+  border: 2px solid #502f4c;
+  border-radius: 4px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+
+.priceQuantity {
+  display: flex;
+  flex-direction: row; /* When we put display flex, flex direction is always set to row by default */
+  justify-content: space-between;
+  align-items: center; /*Align Rs and - 0 + in same line in X axis */
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.bi-dash-lg {
+  color: red;
+}
+
+.bi-plus-lg {
+  color: green;
+}
+
+.text-center {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.HomeBtn, .checkout, .removeAll {
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 6px;
+  margin-top: 10px;
+}
+
+.checkout{
+  background-color: green;
+  border: none;
+}
+
+.removeAll{
+  background-color: red;
+  border: none;
+}
+
+.bi-x-lg{
+  color: red;
+  font-weight: bold;
+}
+
+.shopping-cart{
+  display: grid;
+  grid-template-columns: repeat(1, 320px);
+  justify-content: center;
+  gap: 15px;
+}
+
+.cart-item{
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+}
+
+.title-price-x{
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-price{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-item-price{
+  background-color: black;
+  color: aliceblue;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
